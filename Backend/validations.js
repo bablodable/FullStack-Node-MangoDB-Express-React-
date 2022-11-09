@@ -15,6 +15,6 @@ export const registerValidation = [
 export const postCreateValidation = [
     body('title', 'Gde zagolovok').isLength({ min: 3}).isString(),
     body('text', 'Gde text').isLength({ min: 10 }).isString(),
-    body('tags', 'Tags error format(massiv mb)').optional().isString(),
+    body('tags', 'Tags error format(massiv mb)').optional().isArray(),
     body('imageUrl', 'Link is bad').optional().isString(),
 ];
