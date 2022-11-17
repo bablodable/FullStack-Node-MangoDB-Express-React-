@@ -8,8 +8,8 @@ import Container from '@mui/material/Container';
 import { logout, selectIsAuth } from '../../redux/slices/auth';
 
 export const Header = () => {
-  const isAuth = useSelector(selectIsAuth);
   const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
 
   const onClickLogout = () => {
     if (window.confirm('Exit? You sure?')) {
@@ -28,7 +28,7 @@ export const Header = () => {
           <div className={styles.buttons}>
             {isAuth ? (
               <>
-                <Link to="/posts/create">
+                <Link to="/add-post">
                   <Button variant="contained">Create post</Button>
                 </Link>
                 <Button onClick={onClickLogout} variant="contained" color="error">
